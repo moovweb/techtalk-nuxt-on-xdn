@@ -15,7 +15,6 @@
   "dependencies": {
     "@nuxt/http": "^0.5.10",
     "@xdn/vue": "^2.1.0",
-    "bootstrap-vue": "^2.15.0",
     "nuxt-start": "^2.14.3"
   },
   "devDependencies": {
@@ -24,6 +23,7 @@
     "@xdn/nuxt": "^2.1.0",
     "@xdn/prefetch": "^2.1.0",
     "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5",
