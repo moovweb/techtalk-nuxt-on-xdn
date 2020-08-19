@@ -1,20 +1,14 @@
 # nuxt-on-xdn
 
-## Build Setup
-
 ```bash
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# Run locally
+$ xdn run
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+# Deploy to Moovweb XDN
+$ xdn deploy
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out the [Moovweb XDN Documentation](https://developer.moovweb.com).
