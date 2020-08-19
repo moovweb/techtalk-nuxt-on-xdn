@@ -11,9 +11,11 @@
         <div class="post-item">
           <div class="post-title">
             <h2>
-              <n-link :to="`/posts/${post.id}`">
-                {{ post.title }}
-              </n-link>
+              <Prefetch :url="`/api/posts/${post.id}`">
+                <n-link :to="`/posts/${post.id}`">
+                  {{ post.title }}
+                </n-link>
+              </Prefetch>
             </h2>
           </div>
           <div class="post-summary">
@@ -28,8 +30,12 @@
 
 <script>
 import { API_HOST } from '../helpers/api'
+import { Prefetch } from '@xdn/vue'
 
 export default {
+  components: {
+    Prefetch,
+  },
   async fetch() {
     this.posts = await this.$http
       .$get(`${API_HOST}/posts`)

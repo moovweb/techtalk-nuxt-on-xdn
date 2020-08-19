@@ -51,10 +51,16 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     '@nuxt/http',
+    '@xdn/nuxt/module',
   ],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  publicRuntimeConfig: {
+    http: {
+      browserBaseURL: '/', // otherwise @nuxt/http will try to use 127.0.0.1 when connecting from the browser!
+    },
+  },
 }

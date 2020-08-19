@@ -1,22 +1,32 @@
 {
-  "name": "nuxt-on-xdn",
-  "version": "1.0.0",
-  "private": true,
   "scripts": {
+    "xdn": "xdn",
+    "xdn:start": "xdn run",
+    "xdn:build": "xdn build",
+    "xdn:deploy": "xdn deploy platform",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
+  "name": "nuxt-on-xdn",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "@nuxt/http": "^0.5.10",
-    "bootstrap": "^4.5.0",
+    "@xdn/vue": "^2.1.0",
     "bootstrap-vue": "^2.15.0",
-    "nuxt": "^2.14.0"
+    "nuxt-start": "^2.14.3"
   },
   "devDependencies": {
+    "@xdn/cli": "^2.1.0",
+    "@xdn/core": "^2.1.0",
+    "@xdn/nuxt": "^2.1.0",
+    "@xdn/prefetch": "^2.1.0",
+    "bootstrap": "^4.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "nuxt": "^2.14.0"
   }
 }
