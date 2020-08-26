@@ -10,23 +10,22 @@ const HTML = {
   },
 }
 
-const API = {
-  browser: {
-    serviceWorkerSeconds: 60 * 60,
-  },
-  edge: {
-    maxAgeSeconds: 60 * 60 * 24,
-  },
-}
-
-module.exports = new Router()
+const API = (module.exports = new Router()
   .match('/service-worker.js', ({ serviceWorker }) => {
     serviceWorker('.nuxt/dist/client/service-worker.js')
   })
   .get('/', ({ cache }) => cache(HTML))
   .get('/posts/:id', ({ cache }) => cache(HTML))
-  .get('/api/:path*', ({ proxy, cache }) => {
-    cache(API)
+  .get('/api/:path*', ({ proxy, cache, removeUpstreamResponseHeader }) => {
+    removeUpstreamResponseHeader('set-cookie')
+    cache({
+      browser: {
+        serviceWorkerSeconds: 60 * 60,
+      },
+      edge: {
+        maxAgeSeconds: 60 * 60 * 24,
+      },
+    })
     proxy('api')
   })
-  .use(nuxtRoutes)
+  .use(nuxtRoutes))

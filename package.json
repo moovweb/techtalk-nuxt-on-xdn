@@ -14,19 +14,19 @@
   "private": true,
   "dependencies": {
     "@nuxt/http": "^0.5.10",
-    "@xdn/vue": "^2.1.0",
+    "@xdn/vue": "^2.3.1",
     "bootstrap-vue": "^2.15.0",
     "nuxt-start": "^2.14.3"
   },
   "devDependencies": {
-    "@xdn/cli": "^2.1.0",
-    "@xdn/core": "^2.1.0",
-    "@xdn/nuxt": "^2.1.0",
-    "@xdn/prefetch": "^2.1.0",
+    "@xdn/cli": "^2.3.1",
+    "@xdn/core": "^2.3.1",
+    "@xdn/nuxt": "^2.3.1",
+    "@xdn/prefetch": "^2.3.1",
     "bootstrap": "^4.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "prettier": "^2.0.5"
   }
 }
